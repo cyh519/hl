@@ -1,0 +1,63 @@
+/* show.css - 页面样式 */
+
+/* 全局样式 */
+body {
+  @apply font-sans text-gray-800 bg-gray-50;
+}
+
+/* 自定义颜色 */
+:root {
+  --primary: #165DFF;     /* 主色调：深蓝色 */
+  --secondary: #FF7D00;   /* 辅助色：橙色 */
+  --neutral: #F5F7FA;     /* 中性色：浅灰背景 */
+  --dark: #1D2129;        /* 深色文本 */
+}
+
+/* 导航栏样式 */
+#navbar {
+  @apply transition-all duration-300;
+}
+
+/* 轮播图样式 */
+.carousel-item {
+  @apply transition-opacity duration-1000 ease-in-out;
+}
+
+.carousel-dot.active {
+  @apply bg-white w-6 rounded-full transition-all duration-300;
+}
+
+/* 卡片悬停效果 */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+/* 按钮样式 */
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white px-6 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+}
+
+/* 响应式文本 */
+.text-responsive {
+  @apply text-[clamp(1rem,2vw,1.25rem)];
+}
+
+.heading-responsive {
+  @apply text-[clamp(1.5rem,3vw,2.5rem)];
+}
+
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .md\:hidden {
+    display: none;
+  }
+}  
